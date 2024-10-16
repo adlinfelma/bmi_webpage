@@ -11,13 +11,11 @@ body{
     font-style: normal;
 }
 .main{
-    /* background-color: bisque; */
-    /* height: 100vh; */
     width: 100%;
 }
 .layout{
     background-color: rgb(219, 242, 251);
-    height: 90%;
+    height: 80%;
     width: 70%;
     border-radius: 0 0 30px 30px;
     position: absolute;
@@ -26,20 +24,24 @@ body{
 }
 .container{
     /* background-color: blue; */
-    width: 95%;
-    height: 90%;
+    /* width: 95%; */
+    /* height: 90vh; */
     display: flex;
     flex-direction: row;
+    /* align-items: center; */
     gap: 10%;
     padding: 130px;
 }
 .content{
+    /* background-color: red; */
     width: 50%;
-    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    /* margin: 60px 0; */
     /* background-color: aliceblue; */
 }
 .content h1{
-    color: rgb(49, 48, 48);
+    color: rgb(41, 43, 52);
     /* background-color: azure; */
     font-size: 48px;
     margin-bottom: 25px;
@@ -47,7 +49,7 @@ body{
 .content h1 .bmi{
     display: block;
 }
-.content p, .result_content p, .container3 p{
+.content p, .result_content p, .container3 p, .container4 p{
     font-weight: 400;
     color: dimgrey;
 }
@@ -55,15 +57,17 @@ form{
     background-color: white;
     border-radius: 10px;
     padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     box-shadow: 8px 8px 8px rgb(196, 195, 195, .3);
 }
 form h5{
     font-size: 17px;
-    margin-bottom: 210px;
+    /* margin-bottom: 210px; */
 }
 button{
-    height: 90px;
-    padding: 15px;
+    padding: 5%;
     background-color: rgb(77, 77, 254);
     border-radius: 10px 50px 50px 10px;
     color: white;
@@ -73,18 +77,18 @@ button{
 }
 button .welcome{
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     font-weight: bold;
-    text-align: left;
+    /* text-align: left; */
 }
 /* -------------------container2------------------------------------------ */
 .container2{
     /* background-color: red; */
     display: flex;
     flex-direction: row;
-    gap: 10%;
-    margin: 80px 150px;
-    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 8% 0;
 }
 .man_img{
     height: 450px;
@@ -93,31 +97,181 @@ button .welcome{
 .result_content{
     /* background-color: white; */
     width: 50%;
-    margin-top: 160px;
-    height: 230px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 90px;
 }
-.result_content h2{
-    color: rgb(49, 48, 48);
+.result_content h2, .limitation h2{
+    color: rgb(66, 61, 61);
     font-size: 32px;
     margin-bottom: 25px;
 }
 /* --------------container3---------------------------- */
 .container3{
     background-color: rgb(242, 250, 253);
+    /* background-color: brown; */
     display: flex;
     flex-direction: row;
     gap: 5%;
-    padding: 60px;
+    padding: 5%;
     margin: 0 30px;
     margin-bottom: 20px;
     border-radius: 20px;
 }
 .container3 h5{
+    color: rgb(66, 61, 61);
     font-size: 17px;
     margin-bottom: 20px;
 }
 .container3 img{
     height: 50px;
     width: 50px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+}
+.icon{
+    background-color: rgb(250, 212, 242);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;     */
+}
+.exercise .icon{
+    background-color: rgb(251, 236, 198);
+}
+.moon .icon{
+    background-color: rgb(198, 245, 251);
+}
+/* ------------------container4------------- */
+.container4{
+    display: grid;
+    grid-template-areas: "lim lim lim . gen gen gen ." 
+                        ". . age age age mus mus mus"
+                        ". preg preg preg race race race .";
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+    gap: 20px;
+    margin: 8%;
+}
+.limitation{
+    grid-area: lim;
+    /* grid-column: 1/4;
+    grid-row: 1/2; */
+}
+.gender{
+    grid-area: gen;
+    /* grid-column: 5/8;
+    grid-row: 1/2; */
+}
+.age{
+    grid-area: age;
+    /* grid-column: 3/6;
+    grid-row: 2/3; */
+}
+.muscle{
+    grid-area: mus;
+    /* grid-column: 6/9;
+    grid-row: 2/3; */
+}
+.pregnancy{
+    grid-area: preg;
+    /* grid-column: 2/5;
+    grid-row: 3/4; */
+}
+.race{
+    grid-area: race;
+    /* grid-column: 5/8;
+    grid-row: 3/4; */
+}
+.gender, .age, .muscle, .pregnancy, .race{
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 8px 8px 10px rgba(183, 184, 184, 0.8);
+}
+.container4 h6{
+    color: rgb(41, 43, 52);
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.gen_img, .age_img, .muscle_img, .preg_img, .race_img{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+.gen_img img, .age_img img, .muscle_img img, .preg_img img, .race_img img{
+    height: 25px;
+    width: 25px;
+}
+/* --------mobile view----------- */
+@media screen and (max-width: 768px){
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        /* background-color: pink; */
+    }
+    .layout{
+        width: 100%;
+        left: 0;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        gap: 5%;
+    }
+    .content{
+        width: 100%;
+    }
+    .content h1{
+        text-align: center;
+    }
+    .content p{
+        font-size: 16px;
+        text-align: center;
+    }
+    form{
+        gap: 50px;
+    }
+    form h5{
+        font-size: 20px;
+    }
+    button{
+        border-radius: 10px 60px 60px 10px;
+        width: 100%;
+    }
+    .container2{
+        display: flex;
+        flex-direction: column;
+    }
+    .man_img{
+        width: 100%;
+        height: 700px;
+    }
+    .result_content{
+        width: 100%;
+        padding: 5%;
+        margin: 0;
+    }
+    .result_content p{
+        font-size: 16px;
+    }
+    .container3{
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .container4{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .limitation{
+        text-align: center;
+    }
+    
 }
